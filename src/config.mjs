@@ -1,15 +1,14 @@
-import defaultImage from './assets/images/default.png';
+import defaultImage from './assets/images/default.jpg';
 
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'Patatrack',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://patatrack.cc',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
-  description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+  title: 'Patatrack — Cycling Club',
+  description: '🚵🏼‍♀️🏕️ The Patatrack online identity.',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"

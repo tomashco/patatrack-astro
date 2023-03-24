@@ -1,6 +1,6 @@
 {
-  "name": "@onwidget/astrowind",
-  "description": "A template to make your website using Astro + Tailwind CSS.",
+  "name": "patatrack.cc",
+  "description": "The website of Patatrack Cycling Club.",
   "version": "0.9.8",
   "private": true,
   "scripts": {

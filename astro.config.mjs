@@ -47,6 +47,7 @@ export default defineConfig({
           name: 'git-gateway',
           branch: 'main',
         },
+        // registerWidget: { name: 'mdx', controlComponent: MdxControl, previewComponent: MdxPreview },
         collections: [
           // Content collections
           {
