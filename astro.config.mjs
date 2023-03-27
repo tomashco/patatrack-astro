@@ -9,6 +9,7 @@ import image from '@astrojs/image';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import compress from 'astro-compress';
+import CMSCollections from './src/collections.js';
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
 import { SITE } from './src/config.mjs';
@@ -48,24 +49,7 @@ export default defineConfig({
           branch: 'main',
         },
         // registerWidget: { name: 'mdx', controlComponent: MdxControl, previewComponent: MdxPreview },
-        collections: [
-          // Content collections
-          {
-            name: 'post',
-            label: 'Blog Posts',
-            folder: 'src/content/post',
-            create: true,
-            delete: true,
-            fields: [
-              { name: 'title', widget: 'string', label: 'Post Title' },
-              { name: 'body', widget: 'markdown', label: 'Post Body' },
-              { name: 'publishDate', widget: 'datetime', label: 'Publish Date' },
-              { name: 'excerpt', widget: 'string', label: 'post Description' },
-              { name: 'image', widget: 'image', label: 'post Image' },
-              { name: 'tags', widget: 'list', default: ['term_1', 'term_2'], label: 'Tags' },
-            ],
-          },
-        ],
+        collections: CMSCollections,
       },
     }),
     ...whenExternalScripts(() =>

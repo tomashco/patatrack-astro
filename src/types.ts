@@ -24,6 +24,14 @@ export interface Post {
   readingTime?: number;
 }
 
+export interface Hero {
+  title: string;
+  titleColor: string;
+  subTitleColor: string;
+  subTitle: string;
+  content: string;
+}
+
 export interface MetaSEO {
   title?: string;
   description?: string;

@@ -3,6 +3,7 @@ import Layout from '~/layouts/BaseLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
 import Announcement from '~/components/widgets/Announcement.astro';
+import BackgroundVideo from '~/components/widgets/BackgroundVideo.astro';
 
 import { headerData, footerData } from '~/data';
 
@@ -10,22 +11,28 @@ import { MetaSEO } from '~/types';
 
 export interface Props {
   meta?: MetaSEO;
+  videoId?: string;
+  isHomePage?: boolean;
 }
 
-const { meta } = Astro.props;
+const { meta, videoId, isHomePage } = Astro.props;
 ---
 
 <Layout {meta}>
   <slot name="announcement">
     <Announcement />
   </slot>
+  {
+    videoId && (
+      <slot name="preHeader">
+        <BackgroundVideo videoId={videoId} />
+      </slot>
+    )
+  }
   <slot name="header">
+    <Header {...headerData} isHomePage={isHomePage} isSticky showRssFeed showToggleTheme />
     <slot />
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
   </slot>
-  <main>
-    <slot />
-  </main>
   <slot name="footer">
     <Footer {...footerData} />
   </slot>
