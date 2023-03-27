@@ -45,10 +45,10 @@ export default defineConfig({
     NetlifyCMS({
       config: {
         backend: {
-          name: 'git-gateway',
-          branch: 'main',
+          name: 'github',
+          repo: SITE.repo,
         },
-        // registerWidget: { name: 'mdx', controlComponent: MdxControl, previewComponent: MdxPreview },
+        publish_mode: 'editorial_workflow',
         collections: CMSCollections,
       },
     }),

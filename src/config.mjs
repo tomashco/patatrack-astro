@@ -2,7 +2,7 @@ import defaultImage from './assets/images/default.jpg';
 
 const CONFIG = {
   name: 'Patatrack',
-
+  repo: 'tomashco/patatrack-cc',
   origin: 'https://patatrack.cc',
   basePathname: '/',
   trailingSlash: false,
