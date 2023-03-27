@@ -47,6 +47,7 @@ export default defineConfig({
         backend: {
           name: 'github',
           repo: SITE.repo,
+          branch: 'main',
         },
         publish_mode: 'editorial_workflow',
         collections: CMSCollections,
