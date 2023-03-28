@@ -46,9 +46,9 @@ export default defineConfig({
       config: {
         backend: {
           // name: 'github',
-          // branch: 'main',
           name: 'git-gateway',
           repo: SITE.repo,
+          branch: 'main',
         },
         publish_mode: 'editorial_workflow',
         disableIdentityWidgetInjection: true,
