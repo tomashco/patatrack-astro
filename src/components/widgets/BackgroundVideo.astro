@@ -1,18 +1,19 @@
 ---
 export interface Props {
-  videoId?: string;
+  playlistId?: string;
 }
 
-const { videoId } = Astro.props;
+const { playlistId } = Astro.props;
 ---
 
-<section class="w-full h-full">
+<section>
   {
-    videoId && (
+    playlistId && (
       <iframe
-        class="absolute w-full h-full"
-        src={'https://www.youtube.com/embed/' + videoId + '?&controls=0&autoplay=1&loop=1&mute=1&playsinline=1'}
-        allow="modestbranding;"
+        class="absolute w-full h-full object-cover"
+        src={`https://www.dailymotion.com/embed/playlist/${playlistId}?autoplay=1&loop=1&controls=0&scaleMode=fill`}
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
       />
     )
   }

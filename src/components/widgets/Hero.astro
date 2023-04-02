@@ -25,7 +25,8 @@ const {
   content = (await Astro.slots.render('content')) || heroConfig.content,
   callToAction = await Astro.slots.render('callToAction'),
   callToAction2 = await Astro.slots.render('callToAction2'),
-  image = await Astro.slots.render('image'),
+  image = heroConfig.image, //(await Astro.slots.render('image')) ||
+  // slide,
   isHomePage,
 } = Astro.props;
 ---
@@ -35,11 +36,7 @@ const {
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class={`${isHomePage ? '' : 'py-12 md:py-20'}`}>
-      <div
-        class={`text-center pb-10 md:pb-16 max-w-screen-lg mx-auto ${
-          isHomePage ? 'h-screen flex flex-col justify-center' : ''
-        }`}
-      >
+      <div class="text-center pb-10 md:pb-16 max-w-screen-lg mx-auto">
         {
           title && (
             <h1
@@ -104,20 +101,17 @@ const {
         {
           image && (
             <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Picture
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  aspectRatio={1024 / 576}
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
+              <Picture
+                class="mx-auto rounded-md w-full"
+                widths={[400, 768, 1024, 2040]}
+                sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                aspectRatio={1024 / 576}
+                loading="eager"
+                width={1024}
+                height={576}
+                src={image}
+                alt={image}
+              />
             </div>
           )
         }

@@ -6,6 +6,8 @@ const CMSCollections = [
     folder: 'src/content/post',
     create: true,
     delete: true,
+    extension: 'md',
+    format: 'frontmatter',
     fields: [
       { name: 'title', widget: 'string', label: 'Post Title' },
       { name: 'body', widget: 'markdown', label: 'Post Body' },
@@ -20,7 +22,7 @@ const CMSCollections = [
     label: 'Settings',
     files: [
       {
-        file: 'src/content/Hero.json',
+        file: 'src/content/_Hero.json',
         label: 'Hero config',
         name: 'hero',
         fields: [
@@ -33,21 +35,31 @@ const CMSCollections = [
             label: 'title color',
             name: 'titleColor',
             widget: 'color',
+            required: false,
           },
           {
             label: 'subtitle',
             name: 'subTitle',
             widget: 'string',
+            required: false,
           },
           {
             label: 'subtitleColor',
             name: 'subTitleColor',
             widget: 'color',
+            required: false,
           },
           {
             label: 'content',
             name: 'content',
             widget: 'markdown',
+            required: false,
+          },
+          {
+            label: 'image',
+            name: 'image',
+            widget: 'image',
+            required: false,
           },
         ],
       },

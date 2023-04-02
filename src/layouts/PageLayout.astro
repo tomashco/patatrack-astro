@@ -2,7 +2,7 @@
 import Layout from '~/layouts/BaseLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
-import Announcement from '~/components/widgets/Announcement.astro';
+// import Announcement from '~/components/widgets/Announcement.astro';
 import BackgroundVideo from '~/components/widgets/BackgroundVideo.astro';
 
 import { headerData, footerData } from '~/data';
@@ -11,26 +11,27 @@ import { MetaSEO } from '~/types';
 
 export interface Props {
   meta?: MetaSEO;
-  videoId?: string;
+  playlistId?: string;
   isHomePage?: boolean;
 }
 
-const { meta, videoId, isHomePage } = Astro.props;
+const { meta, playlistId, isHomePage } = Astro.props;
 ---
 
 <Layout {meta}>
   <slot name="announcement">
-    <Announcement />
+    <!-- <Announcement /> -->
   </slot>
   {
-    videoId && (
+    playlistId && (
       <slot name="preHeader">
-        <BackgroundVideo videoId={videoId} />
+        <BackgroundVideo playlistId={playlistId} />
       </slot>
     )
   }
   <slot name="header">
     <Header {...headerData} isHomePage={isHomePage} isSticky showRssFeed showToggleTheme />
+    <div class={`${playlistId ? 'min-h-[90vh]' : ''}`}></div>
     <slot />
   </slot>
   <slot name="footer">

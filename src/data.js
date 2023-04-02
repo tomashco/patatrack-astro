@@ -35,6 +35,10 @@ export const headerData = {
       text: 'Rides',
       links: [
         {
+          text: 'old index',
+          href: getPermalink('/landing/old-index'),
+        },
+        {
           text: 'Sass',
           href: getPermalink('/landing/saas'),
         },

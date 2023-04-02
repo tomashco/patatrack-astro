@@ -1,7 +1,8 @@
 {
-  "title": "Free template for Astro 2.0",
-  "titleColor": "#09ff00",
-  "subTitleColor": "#ff00df",
-  "subTitle": "this is a subtitle colored weirdly",
-  "content": "# this is a generic content I don't know where to put it\n\nasdfasdf\n\nanother content bla bla"
+  "title": "We Are Patatrack",
+  "titleColor": "",
+  "subTitleColor": "",
+  "subTitle": "",
+  "content": "Adventurers, lifelong friends or recent buddies but, most of all, two-wheel travellers. We dream about becoming astronauts, scientists and doctors but, in the meanwhile, we ride",
+  "image": "/patatrackhero.png"
 }
