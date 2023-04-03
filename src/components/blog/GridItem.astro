@@ -1,5 +1,6 @@
 ---
-import { Picture } from '@astrojs/image/components';
+// import { Picture } from '@astrojs/image/components';
+import { Cloudinary } from 'astro-cloudinary-image';
 
 import { BLOG } from '~/config.mjs';
 import type { Post } from '~/types';
@@ -12,6 +13,7 @@ export interface Props {
 }
 
 const { post } = Astro.props;
+// const { image } = post;
 const image = await findImage(post.image);
 ---
 
@@ -20,19 +22,22 @@ const image = await findImage(post.image);
     {
       image && (
         <a href={getPermalink(post.permalink, 'post')}>
-          <Picture
-            src={image}
-            class="md:object-cover w-full md:w-auto md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-            widths={[400, 900]}
-            width={400}
-            height={224}
-            sizes="(max-width: 900px) 400px, 900px"
-            alt={post.title}
-            aspectRatio="16:9"
-            loading="lazy"
-            decoding="async"
-          />
+          <div class="md:object-cover w-full md:w-auto md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700">
+            <Cloudinary width="500" height="450" resize={'fill'} alt={image} src={image} errorImage="/notFound.png" />
+          </div>
         </a>
+        // <Picture
+        //   src={image}
+        //   class="md:object-cover w-full md:w-auto md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+        //   widths={[400, 900]}
+        //   width={400}
+        //   height={224}
+        //   sizes="(max-width: 900px) 400px, 900px"
+        //   alt={post.title}
+        //   aspectRatio="16:9"
+        //   loading="lazy"
+        //   decoding="async"
+        // />
       )
     }
   </div>

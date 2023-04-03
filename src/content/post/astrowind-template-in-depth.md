@@ -3,7 +3,7 @@ publishDate: 2023-01-08T00:00:00Z
 title: AstroWind template in depth
 description: Lorem ipsum dolor sit amet
 excerpt: Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas
-image: ~/assets/images/stickers.jpg
+image: https://res.cloudinary.com/dsqo5zfck/image/upload/v1680552144/patatrack/I2_dftm3d.jpg
 category: Tutorials
 tags:
   - astro
