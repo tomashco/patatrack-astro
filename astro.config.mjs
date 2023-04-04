@@ -11,6 +11,9 @@ import partytown from '@astrojs/partytown';
 import compress from 'astro-compress';
 import CMSCollections from './src/collections.js';
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
+import { loadEnv } from 'vite';
+const { CLOUDINARY_CLOUD_NAME } = loadEnv(import.meta.env.CLOUDINARY_CLOUD_NAME, process.cwd(), '');
+const { CLOUDINARY_API_KEY } = loadEnv(import.meta.env.CLOUDINARY_API_KEY, process.cwd(), '');
 
 import { SITE } from './src/config.mjs';
 import NetlifyCMS from 'astro-netlify-cms';
@@ -53,6 +56,13 @@ export default defineConfig({
         publish_mode: 'editorial_workflow',
         disableIdentityWidgetInjection: true,
         collections: CMSCollections,
+        media_library: {
+          name: 'cloudinary',
+          config: {
+            cloud_name: CLOUDINARY_CLOUD_NAME,
+            api_key: CLOUDINARY_API_KEY,
+          },
+        },
       },
     }),
     ...whenExternalScripts(() =>

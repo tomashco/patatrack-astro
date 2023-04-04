@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "npm run build"
+  command = "cp customNodeModules/vite-plugin-admin-dashboard.js node_modules/astro-netlify-cms/dist/vite-plugin-admin-dashboard.js && npm run build"
 [[headers]]
   for = "/assets/*"
   [headers.values]
