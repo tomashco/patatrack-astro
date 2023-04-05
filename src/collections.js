@@ -10,6 +10,7 @@ const CMSCollections = [
     format: 'frontmatter',
     fields: [
       { name: 'title', widget: 'string', label: 'Post Title' },
+      { name: 'gallery', label: 'Photo Gallery', required: false, widget: 'list', default: [] },
       { name: 'body', widget: 'markdown', label: 'Post Body' },
       { name: 'publishDate', widget: 'datetime', label: 'Publish Date' },
       { name: 'excerpt', widget: 'string', label: 'post Description' },

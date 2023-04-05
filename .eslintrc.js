@@ -19,7 +19,7 @@ module.exports = {
     },
     {
       files: ['*.astro'],
-      parser: 'astro-eslint-parser',
+      parser: ['astro-eslint-parser', 'babel-eslint'],
       parserOptions: {
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.astro'],

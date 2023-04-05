@@ -3,25 +3,25 @@ export interface Post {
   slug: string;
 
   publishDate: Date;
-  title: string;
-  description?: string;
-
-  image?: string;
-
-  canonical?: string | URL;
-  permalink?: string;
-
-  draft?: boolean;
-
-  excerpt?: string;
   category?: string;
   tags?: Array<string>;
   author?: string;
 
-  Content: unknown;
-  content?: string;
+  title: string;
+  image?: string;
+  excerpt?: string;
+  gallery?: Array<string>;
 
+  Content: unknown;
+
+  description?: string;
+
+  permalink?: string;
   readingTime?: number;
+
+  canonical?: string | URL;
+  draft?: boolean;
+  content?: string;
 }
 
 export interface Hero {

@@ -14,6 +14,7 @@ const post = defineCollection({
     excerpt: z.string().optional(),
     category: z.string().optional(),
     tags: z.array(z.string()).optional(),
+    gallery: z.array(z.string()).optional(),
     author: z.string().optional(),
   }),
 });
