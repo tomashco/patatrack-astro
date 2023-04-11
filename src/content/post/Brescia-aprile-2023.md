@@ -11,8 +11,8 @@ excerpt: Questo weekend ci siamo voluti dilettare andando in quel di Brescia,
   convinceva particolarmente
 image: https://res.cloudinary.com/dsqo5zfck/image/upload/v1680549846/cld-sample.jpg
 tags:
+  - rides
   - gravel
-  - patatrack
   - brescia
 ---
 

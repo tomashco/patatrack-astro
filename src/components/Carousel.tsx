@@ -4,6 +4,8 @@ import { MantineProvider } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import { useState } from 'react';
 import useKeypress from '~/hooks/useKeypress';
+import { useFullscreen } from '@mantine/hooks';
+import { full } from '@cloudinary/url-gen/qualifiers/fontHinting';
 
 interface CarouselProps {
   gallery: Array<string>;
@@ -18,15 +20,9 @@ const ShowFullImage = ({ children }) => {
 };
 
 const CarouselComponent = ({ gallery, action, isFullScreen = false }) => (
-  <Carousel
-    onClick={() => action((value) => !value)}
-    maw={'100%'}
-    mx="auto"
-    withIndicators
-    height={isFullScreen ? '100%' : '400'}
-  >
+  <Carousel maw={'100%'} mx="auto" withIndicators height={isFullScreen ? '100%' : '400'}>
     {gallery.map((slide) => (
-      <Carousel.Slide key={slide}>
+      <Carousel.Slide key={slide} onClick={action}>
         <AdvancedImage cldImg={cld.image(slide)} />
       </Carousel.Slide>
     ))}
@@ -34,24 +30,23 @@ const CarouselComponent = ({ gallery, action, isFullScreen = false }) => (
 );
 
 export default function CarouselContainer({ gallery }: CarouselProps) {
-  const [isFullScreen, toggleFullScreen] = useState(false);
+  // const [isFullScreen, toggleFullScreen] = useState(false);
+  const { toggle, fullscreen } = useFullscreen();
 
-  useKeypress('Escape', () => {
-    toggleFullScreen(false);
-  });
+  useKeypress('Escape', toggle);
 
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
-      <CarouselComponent gallery={gallery} action={toggleFullScreen} />
-      {isFullScreen && (
+      <CarouselComponent gallery={gallery} action={toggle} />
+      {fullscreen && (
         <ShowFullImage>
           <strong
-            onClick={() => toggleFullScreen(false)}
+            onClick={toggle}
             className="drop-shadow-2xl fixed z-[998] w-9 h-9 flex justify-center items-center rounded-lg bg-opacity-80 bg-slate-400 top-0 right-0 font-black text-violet-400 text-3xl cursor-pointer alert-del"
           >
             &times;
           </strong>
-          <CarouselComponent gallery={gallery} action={() => {}} isFullScreen />
+          <CarouselComponent gallery={gallery} action={() => {}} isFullScreen={fullscreen} />
         </ShowFullImage>
       )}
     </MantineProvider>

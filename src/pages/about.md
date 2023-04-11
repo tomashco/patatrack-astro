@@ -1,13 +1,9 @@
 ---
-title: 'Terms and Conditions'
+title: 'About'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: January 06, 2023
-
-Please read these terms and conditions carefully before using Our Service.
-
-## Interpretation and Definitions
+## About Us
 
 ### Interpretation
 
