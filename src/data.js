@@ -14,15 +14,27 @@ export const headerData = {
       text: 'Travels',
       links: [
         {
-          text: 'Croatia',
+          text: 'C(road)zia 2021',
           href: getPermalink('/landing/old-index'),
         },
         {
-          text: 'Ladakh',
+          text: 'Eroica 2022',
           href: getPermalink('/landing/saas'),
         },
         {
-          text: 'Kirghizistan',
+          text: 'Almost Salty 2022',
+          href: getPermalink('/landing/saas'),
+        },
+        {
+          text: 'Transardinia 2022',
+          href: getPermalink('/landing/saas'),
+        },
+        {
+          text: 'Ladatrakh 2022',
+          href: getPermalink('/landing/saas'),
+        },
+        {
+          text: 'Kirghizistan 2023',
           href: getPermalink('gravel', 'tag'),
         },
       ],
@@ -36,44 +48,12 @@ export const headerData = {
 };
 
 export const footerData = {
-  // links: [
-  //   {
-  //     title: 'About',
-  //     href: getPermalink('/about'),
-  //   },
-  //   {
-  //     title: 'Rides',
-  //     href: getPermalink('rides', 'tag'),
-  //   },
-  //   {
-  //     title: 'Support',
-  //     links: [
-  //       { text: 'Docs', href: '#' },
-  //       { text: 'Community Forum', href: '#' },
-  //       { text: 'Professional Services', href: '#' },
-  //       { text: 'Skills', href: '#' },
-  //       { text: 'Status', href: '#' },
-  //     ],
-  //   },
-  //   {
-  //     title: 'Company',
-  //     links: [
-  //       { text: 'About', href: '#' },
-  //       { text: 'Blog', href: '#' },
-  //       { text: 'Careers', href: '#' },
-  //       { text: 'Press', href: '#' },
-  //       { text: 'Inclusion', href: '#' },
-  //       { text: 'Social Impact', href: '#' },
-  //       { text: 'Shop', href: '#' },
-  //     ],
-  //   },
-  // ],
   secondaryLinks: [
     { text: 'About', href: getPermalink('/about') },
     { text: 'Rides', href: getPermalink('rides', 'tag') },
   ],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'instagram://user?username=_patatrack/' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/_u/_patatrack/' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
