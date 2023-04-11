@@ -2,7 +2,7 @@ import { AdvancedImage } from '@cloudinary/react';
 import cld from '~/cloudinaryConfig';
 import { useState } from 'react';
 import useKeypress from '~/hooks/useKeypress';
-import { AspectRatio } from '@cloudinary/url-gen/qualifiers';
+import { fill } from '@cloudinary/url-gen/actions/resize';
 
 interface CarouselProps {
   gallery: Array<string>;
@@ -14,8 +14,9 @@ type imgState = {
 };
 const ShowFullImage = ({ image }) => {
   return (
+    // <div className="fixed z-[999] top-0 left-0 bg-black bg-opacity-80 flex justify-center align-middle">
     <div className="fixed z-[999] w-full h-full top-0 left-0 bg-black bg-opacity-80 flex justify-center align-middle">
-      <div className="w-auto flex align-middle justify-center">
+      <div className="fixed flex portrait:w-full landscape:h-full justify-center">
         <AdvancedImage cldImg={cld.image(image)} />
       </div>
     </div>
