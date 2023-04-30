@@ -1,4 +1,6 @@
 ---
+import { getPermalink } from '~/utils/permalinks';
+
 export interface Props {
   title: string;
   buttonText: string;
@@ -18,7 +20,7 @@ const { title = await Astro.slots.render('title'), buttonText } = Astro.props;
     data-netlify-recaptcha="true"
     name="contactForm"
     method="POST"
-    action="/success"
+    action={getPermalink('/success')}
   >
     <p class="hidden">
       <label>
