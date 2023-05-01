@@ -52,8 +52,8 @@ export const headerData = {
       href: getBlogPermalink(),
     },
     {
-      text: 'Support Us',
-      href: getPermalink('/support'),
+      text: 'Contact Us',
+      href: getPermalink('/contact'),
     },
   ],
   // actions: [{ type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }],
