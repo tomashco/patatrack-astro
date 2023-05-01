@@ -20,12 +20,12 @@
   }
 
   .logo-light {
-    background-image: url('logoPatratrackccBlack.png');
+    background-image: url('/logoPatratrackccBlack.png');
     background-size: contain;
     background-repeat: no-repeat;
   }
   .logo-dark {
-    background-image: url('logoPatratrackccWhite.png');
+    background-image: url('/logoPatratrackccWhite.png');
     background-size: contain;
     background-repeat: no-repeat;
   }

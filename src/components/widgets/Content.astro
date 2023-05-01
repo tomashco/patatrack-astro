@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon';
 // import { Picture } from '@astrojs/image/components';
 import { Cloudinary } from 'astro-cloudinary-image';
+import { Picture } from '@astrojs/image/components';
 interface Item {
   title: string;
   description?: string;
@@ -88,26 +89,17 @@ const {
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
-                <div class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg">
-                  <Cloudinary
-                    width="auto"
-                    height="500"
-                    resize={'fill'}
-                    gravity={'auto'}
-                    alt={image.alt}
-                    src={image.src}
-                    errorImage="/notFound.png"
-                  />
-                </div>
-                // <Picture
-                //   class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
-                //   width={500}
-                //   height={500}
-                //   widths={[400, 768]}
-                //   sizes="(max-width: 768px) 100vw, 432px"
-                //   aspectRatio="500:500"
-                //   {...image}
-                // />
+                <Picture
+                  class="mx-auto rounded-md w-full"
+                  widths={[400, 768, 1024, 2040]}
+                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                  aspectRatio={500 / 500}
+                  loading="eager"
+                  width={500}
+                  height={500}
+                  src={image}
+                  alt={image}
+                />
               )}
             </div>
           )

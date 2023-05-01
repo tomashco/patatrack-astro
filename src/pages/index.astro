@@ -25,10 +25,9 @@ const meta = {
   <Hero />
 
   <!-- Content Widget **************** -->
-
   <Content
     image={{
-      src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1680552144/patatrack/S1_xbxoqx.jpg',
+      src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682935843/patatrack/about/yesweride_gnluvn.png',
       alt: 'yes we ride',
     }}
   >
@@ -40,13 +39,12 @@ const meta = {
   </Content>
 
   <!-- Content Widget **************** -->
-
   <Content
     isReversed
     isAfterContent
     image={{
-      src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1680552142/patatrack/Z4_h7clgd.jpg',
-      alt: 'camping',
+      src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682946266/patatrack/about/spreadOurPassion_gqhcz9.png',
+      alt: 'spread our passion',
     }}
   >
     <Fragment slot="content">
@@ -58,7 +56,16 @@ const meta = {
     </Fragment>
   </Content>
 
-  <!-- HighlightedPosts Widget ******* -->
+  <CallToAction
+    callToAction={{
+      text: 'Contact Us',
+      href: '/contact',
+      icon: 'tabler:message-circle',
+    }}
+  >
+    <Fragment slot="title">Wanna talk with us?</Fragment>
+    <Fragment slot="subtitle">Feel free to write us a line!</Fragment>
+  </CallToAction>
 
   <LatestPosts
     title="Journal"
@@ -70,15 +77,4 @@ const meta = {
       'astrowind-template-in-depth.md',
     ]}
   />
-
-  <CallToAction
-    callToAction={{
-      text: 'Contact Us',
-      href: '/contact',
-      icon: 'tabler:message-circle',
-    }}
-  >
-    <Fragment slot="title">Wanna talk with us?</Fragment>
-    <Fragment slot="subtitle">Feel free to write us a line!</Fragment>
-  </CallToAction>
 </Layout>
