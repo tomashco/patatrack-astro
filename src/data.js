@@ -4,7 +4,14 @@ export const headerData = {
   links: [
     {
       text: 'About',
+      title: 'About',
       href: getPermalink('/about'),
+      links: [
+        {
+          text: 'Who we are',
+          href: getPermalink('/about/who-we-are'),
+        },
+      ],
     },
     {
       text: 'Rides',
@@ -12,6 +19,7 @@ export const headerData = {
     },
     {
       text: 'Travels',
+      title: 'Travels',
       links: [
         {
           text: 'C(road)zia 2021',
@@ -52,11 +60,8 @@ export const headerData = {
 };
 
 export const footerData = {
-  secondaryLinks: [
-    ...headerData.links,
-    // { text: 'About', href: getPermalink('/about') },
-    // { text: 'Rides', href: getPermalink('rides', 'tag') },
-  ],
+  secondaryLinks: headerData.links,
+  links: headerData.links,
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/_u/_patatrack/' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },

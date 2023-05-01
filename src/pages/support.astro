@@ -10,7 +10,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features from '~/components/widgets/Features.astro';
 
 const meta = {
-  title: 'Support Us',
+  title: 'Contact Us',
   description: SITE.description,
   dontUseTitleTemplate: true,
 };
@@ -22,17 +22,10 @@ const meta = {
       <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
         <h2
           class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
-          set:html={'Support Us'}
+          set:html={'Contact Us'}
         />
       </div>
       <ContactForm title="Get in touch" buttonText="Write us!" />
-
-      <div class="mb-10 md:mx-auto md:mb-12 max-w-3xl">
-        <h3
-          class="text-3xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
-          set:html={'Donate'}
-        />
-      </div>
     </div>
   </section>
 </Layout>
