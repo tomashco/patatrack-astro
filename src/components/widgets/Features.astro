@@ -33,12 +33,7 @@ const {
               set:html={highlight}
             />
           )}
-          {title && (
-            <h2
-              class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
-              set:html={title}
-            />
-          )}
+          {title && <h2 class="text-4xl md:text-5xl font-bold leading-tighter mb-4 font-heading" set:html={title} />}
 
           {subtitle && (
             <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />

@@ -19,6 +19,10 @@
     @apply bg-slate-900;
   }
 
+  h1 {
+    letter-spacing: 0.125rem;
+  }
+
   .logo-light {
     background-image: url('/logoPatratrackccBlack.png');
     background-size: contain;

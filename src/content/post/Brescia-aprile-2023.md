@@ -10,6 +10,7 @@ excerpt: Questo weekend ci siamo voluti dilettare andando in quel di Brescia,
   seguendo una delle tante traccie di Niccolò che dalla descrizione non ci
   convinceva particolarmente
 image: https://res.cloudinary.com/dsqo5zfck/image/upload/v1680549846/cld-sample.jpg
+draft: true
 tags:
   - rides
   - gravel

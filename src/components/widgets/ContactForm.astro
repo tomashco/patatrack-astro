@@ -11,7 +11,7 @@ const { title = await Astro.slots.render('title'), buttonText } = Astro.props;
 
 <section class="scroll-mt-16" id="contactForm">
   <div class="mb-10 md:mx-auto md:mb-12 max-w-3xl">
-    <h3 class="text-3xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html={title} />
+    <h3 class="text-3xl md:text-4xl font-bold leading-tighter mb-4 font-heading" set:html={title} />
   </div>
   <form
     class="mb-10 md:mx-auto md:mb-12 max-w-3xl"
