@@ -30,7 +30,7 @@ const { meta, playlistId, isHomePage } = Astro.props;
     )
   }
   <slot name="header">
-    <Header {...headerData} isHomePage={isHomePage} isSticky showRssFeed showToggleTheme />
+    <Header {...headerData} isSticky showRssFeed showToggleTheme />
     <div class={`${playlistId ? 'min-h-[90vh]' : ''}`}></div>
     <slot />
   </slot>
