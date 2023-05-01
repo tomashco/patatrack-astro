@@ -15,6 +15,12 @@
     background-color: var(--aw-color-bg-page);
   }
 
+  .bg-image-light {
+    background-image: url('/topographicCurves.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   .bg-dark {
     @apply bg-slate-900;
   }

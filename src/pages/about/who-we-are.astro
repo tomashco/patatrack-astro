@@ -14,92 +14,106 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline subtitle="A brief description of the members of the team, yet to add!">Who we are</Headline>
+  <div class="bg-image-light">
+    <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+      <Headline subtitle="A brief description of the members of the team, yet to add!">
+        Who we <span class="text-yellow-400">are</span>
+      </Headline>
 
-    <!-- Card image right **************** -->
-    <Content
-      image={{
-        src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682933054/patatrack/about/maso_s9fjxr.png',
-        alt: 'Maso',
-      }}
-    >
-      <Fragment slot="content">
-        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Maso</h3>
-        He's our engineer, mechanic, our go-to guy, all-rounder. Whatever problem you have, he'll find a solution for you.
-        For years, alpinism has been his excuse for travelling and exploring the word; now, he's still climbing mountains,
-        but with a bike. Always on the ball, his favourite parties are in his super-equipped garage, dismantling and reassembling
-        all of our bikes, even if they work perfectly. He works for an important italian bicycles brand, but his second full-time
-        job is scouting the maps and tracking new exciting riding routes for us.
-      </Fragment>
-    </Content>
+      <!-- Card image right **************** -->
+      <Content
+        image={{
+          src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682933054/patatrack/about/maso_s9fjxr.png',
+          alt: 'Maso',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="text-2xl font-bold dark:text-white sm:text-3xl mb-2 font-heading text-purple-500 drop-shadow-lg">
+            Maso
+          </h3>
+          He's our engineer, mechanic, our go-to guy, all-rounder. Whatever problem you have, he'll find a solution for you.
+          For years, alpinism has been his excuse for travelling and exploring the word; now, he's still climbing mountains,
+          but with a bike. Always on the ball, his favourite parties are in his super-equipped garage, dismantling and reassembling
+          all of our bikes, even if they work perfectly. He works for an important italian bicycles brand, but his second
+          full-time job is scouting the maps and tracking new exciting riding routes for us.
+        </Fragment>
+      </Content>
 
-    <!-- Card image left **************** -->
-    <Content
-      isReversed
-      isAfterContent
-      image={{
-        src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682933089/patatrack/about/galassia_lekqlp.png',
-        alt: 'Galassia',
-      }}
-    >
-      <Fragment slot="content">
-        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Galassia</h3>
-        Long term two-wheel driver, their parents "forced" her to travel around the world since she literally was a baby.
-        And she hated that. Finally she grew up and started appreciating the biker's joys and sorrows. But not only that:
-        running, hiking, climbing ... the point is get herself moving. She's the one always complaining: the route is too
-        hard, the path is too steep ... but then, she's always in the first line organising the next trip. Does she really
-        likes to ride? We don't know, but we hope so.
-      </Fragment>
-    </Content>
-    <!-- Card image right **************** -->
-    <Content
-      image={{
-        src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682933074/patatrack/about/ilaria_nulg2e.png',
-        alt: 'Ila',
-      }}
-    >
-      <Fragment slot="content">
-        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ilaria</h3>
-        The one that wants to do everything and can't stand still. First climbing, then technical alpinism, some ice climbing
-        and a ton of skitouring: everything she could try, she did. Recently she felt the need to test herself embracing
-        something new, so she bought her shiny new gravel bike and it was first-sight love. Easily recognizable: she's the
-        one exclaiming "How cool!" even when she's pushing her bike through 1 meter of snow, or when we're stumbling around
-        in the rainy night looking for a tent place.
-      </Fragment>
-    </Content>
+      <!-- Card image left **************** -->
+      <Content
+        isReversed
+        isAfterContent
+        image={{
+          src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682933089/patatrack/about/galassia_lekqlp.png',
+          alt: 'Galassia',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="text-2xl font-bold dark:text-white sm:text-3xl mb-2 font-heading text-yellow-400 drop-shadow-lg">
+            Galassia
+          </h3>
+          Long term two-wheel driver, their parents "forced" her to travel around the world since she literally was a baby.
+          And she hated that. Finally she grew up and started appreciating the biker's joys and sorrows. But not only that:
+          running, hiking, climbing ... the point is get herself moving. She's the one always complaining: the route is too
+          hard, the path is too steep ... but then, she's always in the first line organising the next trip. Does she really
+          likes to ride? We don't know, but we hope so.
+        </Fragment>
+      </Content>
+      <!-- Card image right **************** -->
+      <Content
+        image={{
+          src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682933074/patatrack/about/ilaria_nulg2e.png',
+          alt: 'Ila',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="text-2xl font-bold dark:text-white sm:text-3xl mb-2 font-heading text-purple-500 drop-shadow-lg">
+            Ilaria
+          </h3>
+          The one that wants to do everything and can't stand still. First climbing, then technical alpinism, some ice climbing
+          and a ton of skitouring: everything she could try, she did. Recently she felt the need to test herself embracing
+          something new, so she bought her shiny new gravel bike and it was first-sight love. Easily recognizable: she's
+          the one exclaiming "How cool!" even when she's pushing her bike through 1 meter of snow, or when we're stumbling
+          around in the rainy night looking for a tent place.
+        </Fragment>
+      </Content>
 
-    <!-- Card image left **************** -->
-    <Content
-      isReversed
-      isAfterContent
-      image={{
-        src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682933081/patatrack/about/tommy_d64kjs.png',
-        alt: 'Tommy',
-      }}
-    >
-      <Fragment slot="content">
-        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Tommy</h3>
-        Our spearhead, he's the most experienced biker of the team. Born in the saddle, he's always been passionate in all
-        forms of cycling. Simple life lover, in bikepacking with his gravel bike he found the perfect recipe to enjoy the
-        silent outdoors at their fullest. Always ahead, he's our heavy- stuff porter, and still, he's able to go up and down
-        the hills without ever showing a single grin of fatigue.
-      </Fragment>
-    </Content>
-    <!-- Card image right **************** -->
-    <Content
-      image={{
-        src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682933090/patatrack/about/steppen_or9sv8.png',
-        alt: 'Steppen',
-      }}
-    >
-      <Fragment slot="content">
-        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Steppen</h3>
-        Our Big Gentle Giant. Phisically a beast. We always try to overload him to be able to catch up with him during our
-        tours, but his 2- meters-long legs are always relentlessly pushing. He's also one of the most unlucky guy we know,
-        so having him on a trip is always dangerous, since you don't know how many downsides that could have. Super friendly,
-        you can be sure that, when you finally reach him, he's already talking with the local guy.
-      </Fragment>
-    </Content>
-  </section>
+      <!-- Card image left **************** -->
+      <Content
+        isReversed
+        isAfterContent
+        image={{
+          src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682933081/patatrack/about/tommy_d64kjs.png',
+          alt: 'Tommy',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="text-2xl font-bold dark:text-white sm:text-3xl mb-2 font-heading text-yellow-400 drop-shadow-lg">
+            Tommy
+          </h3>
+          Our spearhead, he's the most experienced biker of the team. Born in the saddle, he's always been passionate in
+          all forms of cycling. Simple life lover, in bikepacking with his gravel bike he found the perfect recipe to enjoy
+          the silent outdoors at their fullest. Always ahead, he's our heavy- stuff porter, and still, he's able to go up
+          and down the hills without ever showing a single grin of fatigue.
+        </Fragment>
+      </Content>
+      <!-- Card image right **************** -->
+      <Content
+        image={{
+          src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682933090/patatrack/about/steppen_or9sv8.png',
+          alt: 'Steppen',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="text-2xl font-bold dark:text-white sm:text-3xl mb-2 font-heading text-purple-500 drop-shadow-lg">
+            Steppen
+          </h3>
+          Our Big Gentle Giant. Phisically a beast. We always try to overload him to be able to catch up with him during
+          our tours, but his 2- meters-long legs are always relentlessly pushing. He's also one of the most unlucky guy we
+          know, so having him on a trip is always dangerous, since you don't know how many downsides that could have. Super
+          friendly, you can be sure that, when you finally reach him, he's already talking with the local guy.
+        </Fragment>
+      </Content>
+    </section>
+  </div>
 </Layout>

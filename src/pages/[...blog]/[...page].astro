@@ -29,13 +29,15 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="The place where we share our rides, tips from our travels and everything that comes to our mind!"
-    >
-      The Journal
-    </Headline>
-    <BlogList posts={page.data} />
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-  </section>
+  <div class="bg-image-light">
+    <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+      <Headline
+        subtitle="The place where we share our rides, tips from our travels and everything that comes to our mind!"
+      >
+        <span class="drop-shadow-lg"> The <span class="text-yellow-400">Journal</span></span>
+      </Headline>
+      <BlogList posts={page.data} />
+      <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+    </section>
+  </div>
 </Layout>

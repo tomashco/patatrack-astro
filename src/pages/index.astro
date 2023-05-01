@@ -20,41 +20,62 @@ const meta = {
     Import image from src/assets: import('~/assets/images/hero.png')
     Import image from public: '/hero.png'
    -->
+  <div class="bg-image-light">
+    <!-- "we are patatrack" -->
+    <!-- <div class="bg-gradient-to-t from-purple-500"> -->
+    <Hero isHomePage>
+      <Fragment slot="title">
+        <h1
+          class="text-5xl md:text-6xl font-bold leading-tighter mb-4 font-heading drop-shadow-lg text-purple-500 dark:text-gray-200"
+        >
+          We Are <span class="text-yellow-400">Patatrack</span>
+        </h1>
+      </Fragment>
+      <Fragment slot="content">
+        <p class="bg-gradient-to-t from-transparent via-white">
+          Adventurers, lifelong friends or recent buddies but, most of all, <span class="italic bold drop-shadow-md"
+            >two-wheel travellers.</span
+          > We dream about becoming astronauts, scientists and doctors but, in the meanwhile, <span
+            class="italic bold drop-shadow-md">we ride.</span
+          >
+        </p>
+      </Fragment>
+    </Hero>
+    <!-- </div> -->
 
-  <!-- "we are patatrack" -->
-  <Hero />
+    <!-- Content Widget **************** -->
 
-  <!-- Content Widget **************** -->
-  <Content
-    image={{
-      src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682935843/patatrack/about/yesweride_gnluvn.png',
-      alt: 'yes we ride',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Yes we Ride</h3>
-      And we do it pretty badly: we're not athletes, we're always out of shape, sometimes we're clumsy and also a bit savage,
-      but we do it with all our heart.
-    </Fragment>
-  </Content>
+    <Content
+      image={{
+        src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682935843/patatrack/about/yesweride_gnluvn.png',
+        alt: 'yes we ride',
+      }}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-heading font-bold dark:text-white sm:text-3xl mb-2 text-yellow-400">Yes we Ride</h3>
+        And we do it pretty badly: we're not athletes, we're always out of shape, sometimes we're clumsy and also a bit savage,
+        but we do it with all our heart.
+      </Fragment>
+    </Content>
 
-  <!-- Content Widget **************** -->
-  <Content
-    isReversed
-    isAfterContent
-    image={{
-      src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682946266/patatrack/about/spreadOurPassion_gqhcz9.png',
-      alt: 'spread our passion',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        We're here to spread our passion.
-      </h3>
-      Since some years we spend our free time in the saddle, bringing with us whatever it takes to eat and sleep and discover
-      new places.
-    </Fragment>
-  </Content>
+    <!-- Content Widget **************** -->
+    <Content
+      isReversed
+      isAfterContent
+      image={{
+        src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682946266/patatrack/about/spreadOurPassion_gqhcz9.png',
+        alt: 'spread our passion',
+      }}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold font-heading dark:text-white sm:text-3xl mb-2 text-purple-500">
+          We're here to spread our passion.
+        </h3>
+        Since some years we spend our free time in the saddle, bringing with us whatever it takes to eat and sleep and discover
+        new places.
+      </Fragment>
+    </Content>
+  </div>
 
   <CallToAction
     callToAction={{
@@ -63,18 +84,19 @@ const meta = {
       icon: 'tabler:message-circle',
     }}
   >
-    <Fragment slot="title">Wanna talk with us?</Fragment>
+    <Fragment slot="title"><span class="text-yellow-400">Wanna talk with us?</span></Fragment>
     <Fragment slot="subtitle">Feel free to write us a line!</Fragment>
   </CallToAction>
-
-  <LatestPosts
-    title="Journal"
-    information={`Here we will add all our latest adventures, we hope you will enjoy them!`}
-    postIds={[
-      'get-started-website-with-astro-tailwind-css.md',
-      'how-to-customize-astrowind-to-your-brand.md',
-      'useful-resources-to-create-websites.md',
-      'astrowind-template-in-depth.md',
-    ]}
-  />
+  <div class="bg-image-light">
+    <LatestPosts
+      title="Journal"
+      information={`Here we will add all our latest adventures, we hope you will enjoy them!`}
+      postIds={[
+        'get-started-website-with-astro-tailwind-css.md',
+        'how-to-customize-astrowind-to-your-brand.md',
+        'useful-resources-to-create-websites.md',
+        'astrowind-template-in-depth.md',
+      ]}
+    />
+  </div>
 </Layout>

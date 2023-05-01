@@ -4,6 +4,8 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
+import Headline from '~/components/blog/Headline.astro';
+import { Picture } from '@astrojs/image/components';
 
 const meta = {
   title: 'About',
@@ -13,38 +15,73 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <!-- "we are patatrack" -->
-  <Hero />
+  <div class="bg-image-light">
+    <div class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+      <!-- "we are patatrack" -->
 
-  <!-- Content Widget **************** -->
-  <Content
-    image={{
-      src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682935843/patatrack/about/yesweride_gnluvn.png',
-      alt: 'yes we ride',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Yes we Ride</h3>
-      And we do it pretty badly: we're not athletes, we're always out of shape, sometimes we're clumsy and also a bit savage,
-      but we do it with all our heart.
-    </Fragment>
-  </Content>
+      <Headline>
+        <span class="drop-shadow-lg"> We Are <span class="text-yellow-400">Patatrack</span></span>
+      </Headline>
+      <Fragment slot="title"></Fragment>
+      <Fragment slot="content">
+        <div class="bg-gradient-to-t from-transparent via-white">
+          Adventurers, long or short-time friends but, above all, travelers on two wheels. We dream of becoming
+          astronauts, nuclear scientists and above all superstars but, in the meantime, we pedal. Yes, we love to pedal.
+          And we also do it pretty badly: we're not professionals, we're always out of shape, we're ugly and even a
+          little barbaric, but we put our hearts into it. For some years now we have been spending our summers in the
+          saddle, bringing with us everything we need to eat and sleep, discovering new places. We are here in the hope
+          to share some of our passion to you, to give you new holiday ideas, or even just to save you from being
+          completely stranded.
+        </div>
+      </Fragment>
+    </div>
+    <div class="w-screen">
+      <Picture
+        class="mx-auto rounded-md w-full"
+        widths={[400, 768, 1024, 2040]}
+        sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+        aspectRatio={1024 / 576}
+        loading="eager"
+        width={1024}
+        height={576}
+        src={'https://res.cloudinary.com/dsqo5zfck/image/upload/v1680555008/patatrack/patatrackHero_sch7mi.png'}
+        alt={'we are patatrack'}
+      />
+    </div>
 
-  <!-- Content Widget **************** -->
-  <Content
-    isReversed
-    isAfterContent
-    image={{
-      src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682946266/patatrack/about/spreadOurPassion_gqhcz9.png',
-      alt: 'spread our passion',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        We're here to spread our passion.
-      </h3>
-      Since some years we spend our free time in the saddle, bringing with us whatever it takes to eat and sleep and discover
-      new places.
-    </Fragment>
-  </Content>
+    <div class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+      <Content
+        image={{
+          src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682935843/patatrack/about/yesweride_gnluvn.png',
+          alt: 'yes we ride',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="text-2xl font-bold dark:text-white sm:text-3xl font-heading mb-2 text-yellow-400 drop-shadow-lg">
+            Yes we Ride
+          </h3>
+          And we do it pretty badly: we're not athletes, we're always out of shape, sometimes we're clumsy and also a bit
+          savage, but we do it with all our heart.
+        </Fragment>
+      </Content>
+
+      <!-- Content Widget **************** -->
+      <Content
+        isReversed
+        isAfterContent
+        image={{
+          src: 'https://res.cloudinary.com/dsqo5zfck/image/upload/v1682946266/patatrack/about/spreadOurPassion_gqhcz9.png',
+          alt: 'spread our passion',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="text-2xl font-bold dark:text-white sm:text-3xl font-heading mb-2 text-purple-500 drop-shadow-lg">
+            We're here to spread our passion.
+          </h3>
+          Since some years we spend our free time in the saddle, bringing with us whatever it takes to eat and sleep and
+          discover new places.
+        </Fragment>
+      </Content>
+    </div>
+  </div>
 </Layout>
