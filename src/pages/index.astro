@@ -25,20 +25,21 @@ const meta = {
     <!-- <div class="bg-gradient-to-t from-purple-500"> -->
     <Hero isHomePage>
       <Fragment slot="title">
-        <h1
-          class="text-5xl md:text-6xl font-bold leading-tighter mb-4 font-heading drop-shadow-lg text-purple-500 dark:text-gray-200"
-        >
-          We Are <span class="text-yellow-400">Patatrack</span>
+        <h1 class="text-5xl md:text-6xl font-bold leading-tighter mb-4 font-heading text-purple-500 dark:text-gray-200">
+          <span class="box-highlight">
+            We Are <span class="text-yellow-400">Patatrack</span>
+          </span>
         </h1>
       </Fragment>
       <Fragment slot="content">
-        <p class="bg-gradient-to-t from-transparent via-white">
+        <span class="box-highlight">
+          <!-- bg-gradient-to-t from-transparent via-white  -->
           Adventurers, lifelong friends or recent buddies but, most of all, <span class="italic bold drop-shadow-md"
             >two-wheel travellers.</span
           > We dream about becoming astronauts, scientists and doctors but, in the meanwhile, <span
             class="italic bold drop-shadow-md">we ride.</span
           >
-        </p>
+        </span>
       </Fragment>
     </Hero>
     <!-- </div> -->
@@ -52,9 +53,15 @@ const meta = {
       }}
     >
       <Fragment slot="content">
-        <h3 class="text-2xl font-heading font-bold dark:text-white sm:text-3xl mb-2 text-yellow-400">Yes we Ride</h3>
-        And we do it pretty badly: we're not athletes, we're always out of shape, sometimes we're clumsy and also a bit savage,
-        but we do it with all our heart.
+        <h3>
+          <span class="box-highlight text-2xl font-heading font-bold dark:text-white sm:text-3xl mb-2 text-yellow-400">
+            Yes we Ride
+          </span>
+        </h3>
+        <p class="box-highlight">
+          And we do it pretty badly: we're not athletes, we're always out of shape, sometimes we're clumsy and also a
+          bit savage, but we do it with all our heart.
+        </p>
       </Fragment>
     </Content>
 
@@ -68,11 +75,15 @@ const meta = {
       }}
     >
       <Fragment slot="content">
-        <h3 class="text-2xl font-bold font-heading dark:text-white sm:text-3xl mb-2 text-purple-500">
-          We're here to spread our passion.
+        <h3>
+          <span class="box-highlight text-2xl font-bold font-heading dark:text-white sm:text-3xl mb-2 text-purple-500">
+            We're here to spread our passion.
+          </span>
         </h3>
-        Since some years we spend our free time in the saddle, bringing with us whatever it takes to eat and sleep and discover
-        new places.
+        <p class="box-highlight">
+          Since some years we spend our free time in the saddle, bringing with us whatever it takes to eat and sleep and
+          discover new places.
+        </p>
       </Fragment>
     </Content>
   </div>
@@ -90,13 +101,7 @@ const meta = {
   <div class="bg-image-light">
     <LatestPosts
       title="Journal"
-      information={`Here we will add all our latest adventures, we hope you will enjoy them!`}
-      postIds={[
-        'get-started-website-with-astro-tailwind-css.md',
-        'how-to-customize-astrowind-to-your-brand.md',
-        'useful-resources-to-create-websites.md',
-        'astrowind-template-in-depth.md',
-      ]}
+      information={'Here we will add all our latest adventures, we hope you will enjoy them!'}
     />
   </div>
 </Layout>

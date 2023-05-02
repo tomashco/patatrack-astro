@@ -9,7 +9,7 @@ export interface Props {
   allPostsText?: string;
   allPostsLink?: string | URL;
   information?: string;
-  postIds: string[];
+  count?: number;
 }
 
 const {
@@ -46,7 +46,11 @@ const posts = await findLatestPosts({ count });
       }
     </div>
 
-    {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
+    {
+      information && (
+        <p class="text-highlight text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />
+      )
+    }
   </div>
 
   <Grid posts={posts} />

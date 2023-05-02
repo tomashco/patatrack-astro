@@ -20,6 +20,19 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+  .box-shadow {
+    box-shadow: 0 0 10px rgb(255 255 255 / 0.8);
+  }
+  .text-highlight {
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
+  }
+  .text-darklight {
+    text-shadow: 0 0 7px #000, 0 0 10px #000, 0 0 21px #000;
+  }
+
+  .box-highlight {
+    @apply box-shadow bg-white dark:bg-dark dark:shadow-none;
+  }
 
   .bg-dark {
     @apply bg-slate-900;
