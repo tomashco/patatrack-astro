@@ -2,22 +2,28 @@
 import Layout from '~/layouts/BaseLayout.astro';
 import { getHomePermalink } from '~/utils/permalinks';
 
+import { Picture } from '@astrojs/image/components';
+
 const title = `Error 404`;
 ---
 
 <Layout meta={{ title }}>
-  <section class="flex items-center h-full p-16">
+  <section class="flex items-center h-screen p-16 bg-image-light">
     <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
       <div class="max-w-md text-center">
         <h2 class="mb-8 font-bold text-9xl">
           <span class="sr-only">Error</span>
           <span class="text-primary">404</span>
         </h2>
-        <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
-        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
-          But dont worry, you can find plenty of other things on our homepage.
+        <p class="text-3xl font-semibold md:text-3xl font-heading box-highlight">
+          Lost on the <span class="text-yellow-400">trails!</span>
         </p>
-        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Back to homepage</a>
+        <p class="box-highlight mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+          But dont worry, you can return on the good path in our homepage.
+        </p>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn btn-primary hover:bg-purple-700 ml-4"
+          >Back to homepage</a
+        >
       </div>
     </div>
   </section>

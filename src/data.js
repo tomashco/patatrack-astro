@@ -29,10 +29,10 @@ export const headerData = {
           text: 'Eroica',
           href: getPermalink('/travels/eroica'),
         },
-        {
-          text: 'Almost Salty',
-          href: getPermalink('/travels/almost-salty'),
-        },
+        // {
+        //   text: 'Almost Salty',
+        //   href: getPermalink('/travels/almost-salty'),
+        // },
         {
           text: 'Transardinia',
           href: getPermalink('/travels/transardinia'),
@@ -63,7 +63,7 @@ export const footerData = {
   secondaryLinks: headerData.links,
   links: headerData.links,
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/_u/_patatrack/' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/_u/patatrack.cc/' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
