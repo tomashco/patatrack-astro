@@ -22,28 +22,28 @@ export const headerData = {
       title: 'Travels',
       links: [
         {
-          text: 'C(road)zia 2021',
-          href: getPermalink('/landing/old-index'),
+          text: 'C(road)zia',
+          href: getPermalink('/travels/croadzia'),
         },
         {
-          text: 'Eroica 2022',
-          href: getPermalink('/landing/saas'),
+          text: 'Eroica',
+          href: getPermalink('/travels/eroica'),
         },
         {
-          text: 'Almost Salty 2022',
-          href: getPermalink('/landing/saas'),
+          text: 'Almost Salty',
+          href: getPermalink('/travels/almost-salty'),
         },
         {
-          text: 'Transardinia 2022',
-          href: getPermalink('/landing/saas'),
+          text: 'Transardinia',
+          href: getPermalink('/travels/transardinia'),
         },
         {
-          text: 'Ladatrakh 2022',
-          href: getPermalink('/landing/saas'),
+          text: 'Ladatrack',
+          href: getPermalink('/travels/ladatrack'),
         },
         {
-          text: 'Kirghizistan 2023',
-          href: getPermalink('gravel', 'tag'),
+          text: 'Kirghizistan',
+          href: getPermalink('travels/kirghizistan'),
         },
       ],
     },
